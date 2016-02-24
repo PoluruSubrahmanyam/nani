@@ -1,0 +1,229 @@
+/*
+Author 	: Viswa Karma, Date	: 20/02/2016, App 	: Animal Kindom
+Style Guide:
+	CSS Reset
+	Header
+	Section
+	List
+	Content
+	Utilities
+*/
+/* CSS Reset
+===================================*/
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,
+h6,pre,form,fieldset,input,p,blockquote,table,
+th,td { margin: 0; padding: 0; }
+fieldset,img,abbr { border: 0; }
+address,caption,cite,code,dfn,h1,h2,h3,
+h4,h5,h6,th,var { font-style: normal; font-weight: normal; }
+caption,th { text-align: left; }
+q:before,q:after { content: ''; }
+a { text-decoration: none; }
+
+body {
+  background: #f1f1f1;
+  color: #222;
+  font: 13px/22px arial;
+}
+
+/* Header
+===================================*/
+header{
+	background: #fff;
+	box-shadow: 0 0 10px #222;
+	overflow: hidden;
+	padding: 5px 5px;
+	position: fixed;
+	top: 0;
+	width: 100%;	
+	z-index: 2;
+}
+header h2{
+	color: #7598b1;
+	font-weight: normal;
+	font-size: 23px;
+	padding: 6px 0 0 15px;
+}
+
+/* Section
+===================================*/
+section {
+	margin: 10px 10px;
+}
+section  h2{
+	font-weight: normal;
+	padding: 10px 10px 10px 5px;	
+}
+
+/* List
+===================================*/
+nav, #content { 
+	background: #fff; 
+	border: 1px solid #ccc;
+}
+nav ul { 
+	list-style: none; 
+}
+nav ul li { 
+	border-bottom: 1px solid #d9e2eb; 
+	display: block;
+}
+nav ul li a {
+	color: #787878;
+	display: block;
+	font-weight: bold;
+	overflow: hidden;
+	padding: 10px 0 10px 10px; 
+	position: relative; 
+	text-decoration: none; 
+	width: 100%;
+}
+nav ul li a:hover { 
+	color: #167ac6;
+}
+nav ul li a::after {
+	border-right: 3px solid #787878;
+	border-top: 3px solid #787878;
+	content: '';
+	display: block;
+	height: 9px;
+	margin-top: -5px;
+	position: absolute;
+	right: 20px;
+	top: 50%;
+	width: 9px;
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+		transform: rotate(45deg);
+}
+nav ul li a i{
+	display: block;
+	padding: 0 10px 0 0;
+}
+nav ul li a span{
+	display: block;
+	padding: 5px 0 0 0;
+}
+nav ul li a:hover::after { 
+	border-color: #167ac6; 
+}
+#content ul{
+	list-style-type: none;
+	padding: 10px 0 20px 0;
+}
+#content ul li{
+	background: #f1f1f1;
+	border-bottom: 1px solid #fff;
+	overflow: hidden;
+	padding: 10px 10px;
+}
+#content ul li div{
+	font-weight: bold;
+	padding: 0 0 0 10px;
+}
+#content ul li span{
+	display: block;
+	padding: 0 20px 0 0;
+}
+
+/* Search
+===================================*/
+#search{
+	margin: 10px 10px;
+	padding: 55px 0 0 0;
+}
+#search input[type="text"]{
+	border: 1px solid #ccc;
+	height: 40px;
+	overflow: hidden;
+	padding: 0 0 0 10px;
+	width: 70%;
+}
+#search input[type="submit"]{
+	background: #167ac6;
+	border: 1px solid #ccc;
+	color: #fff;
+	height: 40px;
+	overflow: hidden;
+	width: 30%;
+}
+
+/* Top 10 Animals
+===================================*/
+#topAnimals{
+	background: #fff;
+	overflow: hidden;
+}
+#topAnimals div{
+	width: 50%;	
+}
+#topAnimals div img, #content img{
+	margin: 0 auto;
+	display: block;
+}
+#topAnimals div a{
+	color: #222;
+	display: block;
+	font-size: 24px;
+	text-decoration: none;
+	text-align: center;
+	padding: 10px 10px;
+}
+#topAnimals a span{
+	display: block;
+	padding: 5px 0 0 0;
+}
+/* Content
+===================================*/
+#content h3{
+	padding-left: 10px;
+	color: #167ac6;
+}
+#content p{
+	padding: 10px 10px;
+}
+#content img{
+	padding: 20px 0 0 0;
+}
+/* Global Utilities
+===================================*/
+.box-sizing, section, nav, #content, #search, nav ul li a,
+#search input[type="text"], #search input[type="submit"]{
+	-webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    	box-sizing: border-box;
+}
+.iphone, #search input[type="text"], #search input[type="submit"]{
+	-webkit-appearance: none;
+	-webkit-border-radius:0; 
+		border-radius:0;
+}
+.clear, section, #content ul li, #search{
+	clear: both;
+}
+.left,header img, header h2, #content ul li div, #topAnimals div, 
+nav ul li a img, nav ul li a span,#search input[type="text"], 
+#search input[type="submit"]{
+	float: left;
+}
+.right, #content ul li span{
+	float: right;
+	padding-right: 20px;
+}
+/* Sprite
+===================================*/
+.icon-aquatic,.icon-aquatic\:regular{background-image:url('../icons/icons.svg');background-position:0 0;background-repeat:no-repeat}
+.icon-aquatic-dims{width:32px;height:32px}
+.icon-birds,.icon-birds\:regular{background-image:url('../icons/icons.svg');background-position:0 -32px;background-repeat:no-repeat}
+.icon-birds-dims{width:32px;height:32px}
+.icon-home,.icon-home\:regular{background-image:url('../icons/icons.svg');background-position:0 -64px;background-repeat:no-repeat}
+.icon-home-dims{width:32px;height:32px}
+.icon-insects,.icon-insects\:regular{background-image:url('../icons/icons.svg');background-position:0 -96px;background-repeat:no-repeat}
+.icon-insects-dims{width:32px;height:32px}
+.icon-logo,.icon-logo\:regular{background-image:url('../icons/icons.svg');background-position:0 -128px;background-repeat:no-repeat}
+.icon-logo-dims{width:32px;height:32px}
+.icon-mammals,.icon-mammals\:regular{background-image:url('../icons/icons.svg');background-position:0 -160px;background-repeat:no-repeat}
+.icon-mammals-dims{width:32px;height:32px}
+.icon-reptiles,.icon-reptiles\:regular{background-image:url('../icons/icons.svg');background-position:0 -192px;background-repeat:no-repeat}
+.icon-reptiles-dims{width:32px;height:32px}
